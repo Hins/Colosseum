@@ -1,0 +1,8 @@
+#! /bin/bash
+if [ "$1" == "test" ]; 
+then
+g++ -g -DTEST ./lib/Lib.cpp ./lib/Log.cpp N-gram_model.cpp Bigram.cpp Trigram.cpp main.cpp -o NgramStone 
+else
+g++ -g ./lib/Lib.cpp ./lib/Log.cpp N-gram_model.cpp Bigram.cpp Trigram.cpp main.cpp -o NgramStone
+fi
+mv NgramStone ../bin/
